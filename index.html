@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LanBo-Moe | Moses Olanrewaju Bolarin</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #B8860B;
+            --deep-blue: #000080;
+            --light-gold: #FFF2CC;
+            --earth-brown: #8B4513;
+            --light-brown: #D2B48C;
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(120deg, var(--deep-blue), #1a1a4e);
+        }
+        .gold-text {
+            color: var(--gold);
+        }
+        .deep-blue-text {
+            color: var(--deep-blue);
+        }
+        .gold-border {
+            border-color: var(--gold);
+        }
+        .gold-bg {
+            background-color: var(--gold);
+        }
+        .deep-blue-bg {
+            background-color: var(--deep-blue);
+        }
+        .earth-bg {
+            background-color: var(--earth-brown);
+        }
+        .light-gold-bg {
+            background-color: var(--light-gold);
+        }
+        .shadow-gold {
+            box-shadow: 0 4px 14px rgba(255, 215, 0, 0.25);
+        }
+        .shadow-blue {
+            box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25);
+        }
+        .btn-primary {
+            background-color: var(--deep-blue);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #000066;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: var(--gold);
+            color: var(--deep-blue);
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #e6c200;
+            transform: translateY(-2px);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .book-card, .service-card, .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .book-card:hover, .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .highlight-box {
+            border-left: 4px solid var(--gold);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 25px;
+            width: 1px;
+            height: calc(100% - 15px);
+            background: var(--gold);
+        }
+        .timeline-item:last-child:after {
+            display: none;
+        }
+        .golden-jubilee-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .golden-jubilee-badge:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(0.95);
+                opacity: 0.7;
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-in-left {
+            opacity: 0;
+            animation: slideInLeft 0.8s forwards;
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .slide-in-right {
+            opacity: 0;
+            animation: slideInRight 0.8s forwards;
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        /* Cart styles */
+        .cart-item {
+            border-bottom: 1px solid #eaeaea;
+        }
+        /* Make sure all content is optimized for PDF export */
+        @media print {
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .page-break-avoid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-2xl font-bold">
+                            <span class="gold-text"></span><span class="deep-blue-text"></span>
+                        </h1>
+                    </div>
+
+                                    <div class="flex items-center space-x-2">
+                <img src="https://i.imgur.com/xo4x8sA.png" alt="LanBo-Moe Logo" class="logo-img">
+            </div>
+
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#home" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Home</a>
+                        <a href="#about" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">About</a>
+                        <a href="#books" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Books</a>
+                        <a href="#music" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Music</a>
+                        <a href="#services" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Services</a>
+                        <a href="#shop" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Shop</a>
+                        <a href="#Gallery" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Gallery</a>
+                        <a href="#contact" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
+                        <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
+                    </button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <!-- Mobile menu button -->
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div class="sm:hidden" id="mobile-menu" style="display: none;">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#home" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-900 border-l-4 border-indigo-500">Home</a>
+                <a href="#about" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">About</a>
+                <a href="#books" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Books</a>
+                <a href="#music" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Music</a>
+                <a href="#services" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Services</a>
+                <a href="#shop" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Shop</a>
+                <a href="#Gallery" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Gallery</a>
+                <a href="#contact" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Contact</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="flex items-center px-4">
+                    <div class="flex-shrink-0">
+                        <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
+                            <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="md:pr-10 fade-in" style="animation-delay: 0.2s;">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        <span class="gold-text">50</span> Years of Grace.<br>
+                        <span class="gold-text">100+</span> Songs.<br>
+                        <span class="gold-text">15+</span> Books.<br>
+                        <span class="gold-text">∞</span> Kingdom Impact.
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">Christian Minister • Bestselling Author • Visionary Entrepreneur • Worship Leader</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#books" class="btn-secondary font-bold px-6 py-3 rounded-lg text-lg inline-flex items-center">
+                            Explore the Mysteries <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#videos" class="btn-primary font-bold px-6 py-3 rounded-lg text-lg inline-flex items-center border border-white">
+                            Watch Now <i class="fas fa-play ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative slide-in-right" style="animation-delay: 0.4s;">
+                    <div class="w-full h-96 bg-gray-200 rounded-lg relative overflow-hidden">
+                        <!-- Placeholder for Moses' portrait image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500 text-lg">
+                     <img src="https://i.imgur.com/EuCQbLp.jpeg" alt="Moses Olanrewaju Bolarin" class="profile-img shadow-xl w-full h-full">
+
+                                Moses Olanrewaju Bolarin
+                            </span>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 golden-jubilee-badge bg-white shadow-gold rounded-full p-4 z-10">
+                        <div class="text-center">
+                            <span class="block text-sm font-bold deep-blue-text">Celebrating</span>
+                            <span class="block text-xl font-bold gold-text">50 YEARS</span>
+                            <span class="block text-xs deep-blue-text">of Grace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Discover More</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Read Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-book-open text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Read</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Majestic World of Business Publishing: Books, Blogs & Kingdom Insights</p>
+                    <a href="#books" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Read <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Learn Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Learn</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">3niti Multimedia Academy & Global Skills Exchange Hub: Master Tech & Creativity</p>
+                    <a href="#services" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Learn <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Watch Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-play text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Watch</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">"A New You with Moses" Podcast & "Who Told You to Stop Dreaming?" Series</p>
+                    <a href="#videos" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Watch <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Listen Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-headphones text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Listen</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Worship Music on ReverbNation & Songtradr</p>
+                    <a href="#music" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Listen <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Invest Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-briefcase text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Invest</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Invest in Kingdom-Driven Ventures</p>
+                    <a href="#contact" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Invest <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+                
+                <!-- Freebies Card -->
+                <div class="service-card bg-white rounded-xl shadow-md p-6 border-t-4 gold-border page-break-avoid">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 flex-shrink-0 deep-blue-bg rounded-full flex items-center justify-center text-white">
+                            <i class="fas fa-gift text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold ml-4 deep-blue-text">Freebies</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Download Free Resources: Sermons, Music Samples & eBooks</p>
+                    <a href="#freebies" class="text-sm font-bold gold-text inline-flex items-center">
+                        More > Freebies <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 light-gold-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Kingdom Treasures</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mystery of the Kingdom Book 3 -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-48 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                                 <img src="https://i.imgur.com/0jC20H1.png" alt="Mysteries of the Kingdom Book 1" class="w-full h-40 object-cover">
+                                
+                            </span>
+                        </div>
+                        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                            NEW!
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold deep-blue-text mb-2">Mysteries of the Kingdom – Book 3</h3>
+                        <p class="text-gray-600 mb-4">The Crown Jewel of the Trilogy – Unveiled for My 50th Birthday!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$27.99</span>
+                            <a href="#shop" class="btn-primary rounded-lg px-4 py-2 text-sm">Get Your Copy</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jehovah Nissi Album -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-48 bg-gray-200 relative">
+                        <!-- Placeholder for album cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                                 <img src="https://i.imgur.com/IPpYpQN.png" alt="Jehovah Nissi Album" class="w-full h-40 object-cover">
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-bold deep-blue-text mb-2">Jehovah Nissi Album</h3>
+                        <p class="text-gray-600 mb-4">Worship that Elevates – Stream on ReverbNation!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">Free Streaming</span>
+                            <a href="#music" class="btn-primary rounded-lg px-4 py-2 text-sm">Listen Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3niti Multimedia Academy -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-48 bg-gray-200 relative">
+                        <!-- Placeholder for academy image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                                 <img src="https://i.imgur.com/LUrkKmm.png" alt="3niti Multimedia Academy" class="w-full h-40 object-cover">
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+
+                        <h3 class="text-xl font-bold deep-blue-text mb-2">3niti Multimedia Academy</h3>
+                        <p class="text-gray-600 mb-4">Learn Coding, IT & Creativity – Enroll Today!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">From $10</span>
+                            <a href="#services" class="btn-primary rounded-lg px-4 py-2 text-sm">Join the Academy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Content -->
+    <section class="py-14 bg-white">
+        <div class="container mx-auto px-4 sm:px-4 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Fresh from the Desk of Moses</h2>
+            
+             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-64 bg-gray-200 relative">
+                            <!-- Placeholder for video thumbnail -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+					<img src="https://i.imgur.com/CsNis1P.png" alt="Territorial Establishments and Advancements" class="w-full object-cover">
+                                </span>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center">
+                                    <i class="fas fa-play text-2xl deep-blue-text"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-24">
+                            <h3 class="text-xl font-bold deep-blue-text mb-2">A New You with Moses – Territorial Establishments and Advancements</h3>
+                            <p class="text-gray-600 mb-4">In this ministration on  Prayer Tower Global, Pastor Moses explores how to prepare to see your hands and life advanced for the Kingdom, as God positions you to take new territories in every sphere!</p>
+                            <a href="#videos" class="gold-text font-bold">Watch Full Episode →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-1">
+                    <div class="space-y-6">
+                        <!-- Blog Post 1 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                            <div class="p-6">
+                                <span class="text-xs text-gray-500 mb-2 block">April 3, 2024</span>
+                                <h3 class="text-lg font-bold deep-blue-text mb-2">Golden Jubilee Reflections: 50 Lessons from 50 Years</h3>
+                                <p class="text-gray-600 mb-3 text-sm">As I approach my 50th birthday, I reflect on the profound lessons God has taught me through five decades of grace...</p>
+                                <a href="#blog" class="gold-text text-sm font-bold">Read More →</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Blog Post 2 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                            <div class="p-6">
+                                <span class="text-xs text-gray-500 mb-2 block">March 15, 2024</span>
+                                <h3 class="text-lg font-bold deep-blue-text mb-2">How to Build a Global Brand in 12 Steps</h3>
+                                <p class="text-gray-600 mb-3 text-sm">A preview of my best-selling book on global branding strategies that can transform your business vision...</p>
+                                <a href="#blog" class="gold-text text-sm font-bold">Read More →</a>
+                            </div>
+                        </div>
+                        
+                        <a href="#blog" class="btn-primary block text-center rounded-lg px-4 py-3 text-sm">Explore All Content</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 light-gold-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 deep-blue-text">About Moses Olanrewaju Bolarin</h2>
+                    
+                    <div class="highlight-box pl-4 mb-8">
+
+                        <p class="text-gray-700 mb-4">
+                            I’m Moses Olanrewaju Bolarin, widely recognized as LanBo-Moe—a digital transformation strategist, multimedia educator, and entrepreneur devoted to empowering Africa’s future. Over the past decade, I’ve pioneered innovative initiatives in coding, digital literacy, and multimedia, working with numerous schools and community organizations across Nigeria to unlock the potential of young minds.
+                        </p>
+
+                        <p class="text-gray-700 mb-4">
+My philosophy is rooted in blending creativity with technology and local insights with global perspectives. I believe that when passion meets opportunity, transformation is inevitable. Join me as we inspire, empower, and shape a future where every young African has the chance to excel in a rapidly evolving world.
+                        </p>
+
+                        <p class="text-gray text-opacity-90 italic">
+Because the future belongs to those who dare to dream and innovate.
+                        </p>
+                        <p class="text-gray text-opacity-90 italic">
+.
+                        </p>
+
+                        <h3 class="text-xl font-bold mb-3 deep-blue-text">Faith & Family</h3>
+                        <p class="text-gray-700 mb-4">
+                            Saved in 1986 while still in high school, Moses Olanrewaju Bolarin has dedicated his life to ministry and entrepreneurship. Moses Olanrewaju Bolarin is a multifaceted individual whose life and work bridge faith, technology, and creativity. With over three decades of ministry experience, he has impacted countless lives through his teachings, writings, and leadership. He is blessed with two children, Misi and Mayo.Through his writings, music, teachings, and mentorship programs, Moses is committed to leaving a legacy that will continue to impact generations to come.
+                        </p>
+                    </div>
+                    
+                    <div class="highlight-box pl-4 mb-8">
+                        <h3 class="text-xl font-bold mb-3 deep-blue-text">50th Birthday Milestone</h3>
+                        <p class="text-gray-700 mb-4">
+                            2024 marks Moses' Golden Jubilee celebration, with December 3rd being his 50th birthday. This milestone year includes the special release of "Mysteries of the Kingdom – Book 3," the culmination of his acclaimed trilogy.
+                        </p>
+                    </div>
+                    
+                    <div class="highlight-box pl-4 mb-8">
+                        <h3 class="text-xl font-bold mb-3 deep-blue-text">Professional Background</h3>
+                        <p class="text-gray-700 mb-4">
+                            A graduate of the University of Lagos with a degree in Computer Science and a Post Graduate Diploma in Public Relations, Moses has established himself as a respected figure in the I.T. and multimedia sectors. He was ranked in the top 6% of Nigerian executives in 2015 and received the prestigious "Award of Excellence."
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a href="#ministry" class="btn-primary font-bold px-6 py-3 rounded-lg text-sm inline-flex items-center">
+                            Ministry Journey <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#ventures" class="btn-secondary font-bold px-6 py-3 rounded-lg text-sm inline-flex items-center">
+                            Business Ventures <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-96 bg-gray-200 relative">
+                            <!-- Placeholder for ministry image -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+		                   <img src="https://i.imgur.com/JQx3yuq.png" alt="Moses Olanrewaju Bolarin Ministry Journey" class="ministry-img shadow-xl w-full h-full">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-2">Ministry Journey</h3>
+                            <p class="text-gray-600">Associate Pastor at His Purpose Church, with over 25 years in ministry since 1986. Mentored by esteemed leaders including Pastor Tony Olukoyede.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-96 bg-gray-200 relative">
+                            <!-- Placeholder for business image -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+		                   <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWp-hblrG-bRjKcWYi3fx38U03vImnnzsXm4bHF6Gpv6CTzbAMJkg22UKdvnFD_pHKloCnKDh2BFQoz759ohqF9PmCrh_8R_HsOagE0fS0VS9Yf2D_4KwF0Aaxuh_9paOsczOERn1D3EPlUAyt9aayx_nYQ2b_-cSdRh32SPfrZn8yqtL3ScklUEMGVcBF/w640-h552/Snapshot_20210920_7-new.JPG" alt="Moses Olanrewaju Bolarin Entrepreneural Legacy" class="Entrepreneural-img shadow-xl w-full h-96">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="text-xl font-bold deep-blue-text mb-2">Entrepreneurial Legacy</h3>
+                            <p class="text-gray-600">Founder of Majestic World of Business (global strategy) and CEO of 3niti Multimedia Academy, transforming lives through technology, creativity, and innovation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Books & Publications -->
+    <section id="books" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Books & Publications</h2>
+            
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-center deep-blue-text">Mysteries of the Kingdom Trilogy</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Book 1 -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-64 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/o3JBXA0.png" alt="Mysteries of the Kingdom Book 1" class="w-full h=64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-2">Mysteries of the Kingdom - Book 1</h4>
+                            <p class="text-gray-600 mb-4">Foundations of Discovering the Deep Things of God. This groundbreaking work unveils foundational truths about God's Kingdom that will transform your spiritual walk. (2012)</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold gold-text">$10.00</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-4 py-2 text-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book 2 -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-64 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/L37wTVm.png" alt="Mysteries of the Kingdom Book 2" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-2">Mysteries of the Kingdom - Book 2</h4>
+                            <p class="text-gray-600 mb-4">Advanced Kingdom Truths. Dive deeper into the mysteries of God's Kingdom with this sequel that builds on the foundational truths of Book 1. (2018)</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold gold-text">$14.99</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-4 py-2 text-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book 3 -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-64 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/915V6Pa.png" alt="Mysteries of the Kingdom Book 3" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                            <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                                NEW!
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-2">Mysteries of the Kingdom - Book 3</h4>
+                            <p class="text-gray-600 mb-4">Visually Rich Spiritual Guide.
+
+The crown jewel of the trilogy, unveiled for Moses' 50th birthday celebration, featuring stunning visuals and profound revelations. (2024)</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold gold-text">$27.99</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-4 py-2 text-sm">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-bold mb-8 text-center deep-blue-text">Other Notable Works</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Business Book -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-80 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/voWvv3V.png" alt="12 Simple Strategies to Becoming a Global Brand" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-md font-bold deep-blue-text mb-1">12 Simple Strategies to Becoming a Global Brand</h4>
+                            <p class="text-gray-600 text-sm mb-3">Practical branding guide for businesses</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-bold gold-text">$9.90</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-3 py-1 text-xs">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Destiny World -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-80 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/ChM33Zp.png" alt="Destiny World" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-md font-bold deep-blue-text mb-1">Destiny World</h4>
+                            <p class="text-gray-600 text-sm mb-3">Inspirational journey of self-discovery</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-bold gold-text">$8.00</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-3 py-1 text-xs">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Create Your Own -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-80 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/py3R8QX.png" alt="Create Your Own" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-md font-bold deep-blue-text mb-1">Create Your Own</h4>
+                            <p class="text-gray-600 text-sm mb-3">Recreating Your World</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-bold gold-text">$9.99 each</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-3 py-1 text-xs">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Who Told You to Stop Dreaming -->
+                    <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="h-80 bg-gray-200 relative">
+                            <!-- Placeholder for book cover -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-gray-500">
+                            <img src="https://i.imgur.com/vBkADNP.png" alt="Who Told You to Stop Dreaming" class="w-full h-64 object-cover">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="text-md font-bold deep-blue-text mb-1">Who Told You to Stop Dreaming?</h4>
+                            <p class="text-gray-600 text-sm mb-3">Inspirational guide to dream fulfillment</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-bold gold-text">$9.99</span>
+                                <a href="#shop" class="btn-primary rounded-lg px-3 py-1 text-xs">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#shop" class="btn-secondary font-bold px-8 py-3 rounded-lg text-lg inline-flex items-center">
+                    View All Books <i class="fas fa-book ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="py-16 deep-blue-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gold-text">Music & Worship</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 gold-text">Music Catalog</h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Album 1 -->
+                        <div class="flex bg-white bg-opacity-10 rounded-xl overflow-hidden page-break-avoid">
+                            <div class="w-1/3 bg-gray-600">
+                                <!-- Placeholder for album cover -->
+                                <div class="h-full flex items-center justify-center">
+                                    <span class="text-gray-300 text-sm text-center p-2">
+                            <img src="https://i.imgur.com/x7zSuxs.png" alt="Jehovah Nissi Album" class="w-full object-cover">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-2/3 p-4">
+                                <h4 class="text-xl font-bold gold-text mb-2">Jehovah Nissi</h4>
+                                <p class="text-white text-opacity-80 text-sm mb-3">Featuring collaborations with gospel artists under Charisma Music label.</p>
+                                <a href="https://www.reverbnation.com/mosesolanrewajubolarin" class="text-white inline-flex items-center text-sm">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen on ReverbNation
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Album 2 -->
+                        <div class="flex bg-white bg-opacity-10 rounded-xl overflow-hidden page-break-avoid">
+                            <div class="w-1/3 bg-gray-600">
+                                <!-- Placeholder for album cover -->
+                                <div class="h-full flex items-center justify-center">
+                                    <span class="text-gray-300 text-sm text-center p-2">
+
+                            <img src="https://i.imgur.com/VIQGzDh.png" alt="Christmas Albums" class="w-full object-cover">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-2/3 p-4">
+                                <h4 class="text-xl font-bold gold-text mb-2">Christmas Albums</h4>
+                                <p class="text-white text-opacity-80 text-sm mb-3">Special Christmas collections from 1994, 1995, and 2004 produced under GC+GC.</p>
+                                <a href="https://www.reverbnation.com/mosesolanrewajubolarin" class="text-white inline-flex items-center text-sm">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen on ReverbNation
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Album 3 -->
+                        <div class="flex bg-white bg-opacity-10 rounded-xl overflow-hidden page-break-avoid">
+                            <div class="w-1/3 bg-gray-600">
+                                <!-- Placeholder for album cover -->
+                                <div class="h-full flex items-center justify-center">
+                                    <span class="text-gray-300 text-sm text-center p-2">
+                            <img src="https://i.imgur.com/A4zl3OA.png" alt="Rhema Chapel Contributions" class="w-full object-cover">
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="w-2/3 p-4">
+                                <h4 class="text-xl font-bold gold-text mb-2">Rhema Chapel Choir</h4>
+                                <p class="text-white text-opacity-80 text-sm mb-3">Contributions to Rhema Chapel Choir (2000) including songs like "In the Silent Time of the Night".</p>
+                                <a href="https://www.reverbnation.com/mosesolanrewajubolarin" class="text-white inline-flex items-center text-sm">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen on ReverbNation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 gold-text">Songwriting Legacy</h3>
+                    
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 mb-8 page-break-avoid">
+                        <p class="text-white text-opacity-90 mb-4">
+                            With over 100 original compositions, Moses Olanrewaju Bolarin has created a rich tapestry of worship music used in churches globally. His proficiency with keyboard and box guitar has enabled him to craft soul-stirring melodies that elevate worship experiences.
+                        </p>
+                        <p class="text-white text-opacity-90">
+                            His music ministry complements his written works, providing a multisensory approach to experiencing God's presence and Kingdom principles.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                        <h4 class="text-xl font-bold gold-text mb-4">Featured Songs</h4>
+                        
+
+                            </div>
+
+<iframe width="100%" height="265" scrolling="no" frameborder="no" src="https://www.reverbnation.com/widget_code/html_widget/artist_4532598?widget_id=55&pwc[included_songs]=1&context_type=page_object&pwc[size]=small" style="width:0px;min-width:100%;max-width:100%;"></iframe>
+      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Content -->
+    <section id="videos" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Video Channel & Podcast</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 deep-blue-text">A New You with Moses</h3>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-6 page-break-avoid">
+                        <div class="h-72 bg-gray-200 relative">
+                            <!-- Placeholder for featured video -->
+                       
+<iframe width="560" height="300" src="https://www.youtube.com/embed/xMK6ixg4s5k?si=asAhHBFDRMxyPuLh&amp;start=328" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-2">Speak, Seek, & Worship</h4>
+                            <p class="text-gray-600 mb-4"> Ministration at His Purpose Church, Purposelife Retreat Center on Sunday, March 20, 2022.</p>
+                            <a href="https://www.youtube.com/@ANewYouWithMoses" target="_blank" class="btn-primary rounded-lg px-4 py-2 text-sm inline-flex items-center">
+                                Watch on YouTube <i class="fas fa-external-link-alt ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                            <div class="h-40 bg-gray-200 relative">
+                                <!-- Placeholder for video thumbnail -->
+<iframe width="280" height="157" src="https://www.youtube.com/embed/pI3a-Pt6k_s?si=DkDh0wSDLFbtDKmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <div class="w-10 h-10 shadow-md flex items-center justify-center">
+
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                        <i class=""></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="p-4">
+                                <h5 class="font-bold deep-blue-text text-sm">I Need You Series - Episode 1</h5>
+                                <p class="text-gray-600 text-xs mt-1">Exploring the search for God and our need for Him in life.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                            <div class="h-40 bg-gray-200 relative">
+                                <!-- Placeholder for video thumbnail -->
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-gray-500 text-sm">
+<iframe width="280" height="157" src="https://www.youtube.com/embed/5SLOKATqDHE?si=lmc-1ca3kczQWJMa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <h5 class="font-bold deep-blue-text text-sm">Who Told You to Stop Dreaming?</h5>
+                                <p class="text-gray-600 text-xs mt-1">Overcoming obstacles to pursue God-given dreams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 deep-blue-text">Ministry & Teaching</h3>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden mb-6 page-break-avoid">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-4">Kingdom Principles</h4>
+                            <p class="text-gray-600 mb-6">
+                                Dive into Pastor Moses' teachings on biblical mysteries, faith fundamentals, and practical spiritual growth. With over 25 years in ministry, his insights illuminate complex spiritual concepts with clarity and practical application.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fas fa-microphone-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Discovering The Secret Chambers</h5>
+                                        <p class="text-gray-600 text-sm">Sermon Series</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <button class="text-gray-600">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fas fa-microphone-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Kingdom Principles Workshop</h5>
+                                        <p class="text-gray-600 text-sm">5-Part Teaching</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <button class="text-gray-600">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fas fa-microphone-alt text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Faith Foundations</h5>
+                                        <p class="text-gray-600 text-sm">Beginner's Guide</p>
+                                    </div>
+                                    <div class="ml-auto">
+                                        <button class="text-gray-600">
+                                            <i class="fas fa-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold deep-blue-text mb-4">Upcoming Events</h4>
+                            
+                            <div class="space-y-4">
+                                <div class="flex">
+                                    <div class="w-16 h-16 bg-light-gold-bg flex flex-col items-center justify-center rounded-lg mr-4">
+                                        <span class="text-xs font-bold text-gray-600">DEC</span>
+                                        <span class="text-xl font-bold deep-blue-text">03</span>
+                                        <span class="text-xs font-bold text-gray-600">2024</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Golden Jubilee Celebration</h5>
+                                        <p class="text-gray-600 text-sm">50th Birthday & Book Launch</p>
+                                        <a href="#contact" class="text-sm gold-text font-bold">Register →</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex">
+                                    <div class="w-16 h-16 bg-light-gold-bg flex flex-col items-center justify-center rounded-lg mr-4">
+                                        <span class="text-xs font-bold text-gray-600">JUN</span>
+                                        <span class="text-xl font-bold deep-blue-text">15</span>
+                                        <span class="text-xs font-bold text-gray-600">2024</span>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Kingdom Mysteries Conference</h5>
+                                        <p class="text-gray-600 text-sm">3-Day Intensive Teaching</p>
+                                        <a href="#contact" class="text-sm gold-text font-bold">Register →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://www.youtube.com/@ANewYouWithMoses" target="_blank" class="btn-secondary font-bold px-8 py-3 rounded-lg text-lg inline-flex items-center">
+                    Subscribe to YouTube Channel <i class="fab fa-youtube ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 light-gold-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Entrepreneurship & Leadership</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Majestic World of Business -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-48 bg-gray-200 relative">
+                        <!-- Placeholder for company image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/z0xajdv.png" alt="Majestic World of Business" class="h-full object-cover">
+                                
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold deep-blue-text mb-3">Majestic World of Business</h3>
+                        <p class="text-gray-600 mb-4">
+                            A one-stop creative company offering Multimedia, Information Technology (IT), and Mobile Content services on a global scale. As Founder and Global Strategist, Moses delivers customized solutions for brands seeking digital transformation and global reach.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">Brand Development & Strategy</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">IT Solutions & Digital Transformation</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">Global Marketing & Business Consulting</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" class="btn-primary rounded-lg px-6 py-2 inline-flex items-center">
+                                Get Consultation <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3niti Multimedia Academy -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-48 bg-gray-200 relative">
+                        <!-- Placeholder for academy image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/KOuxVyN.png" alt="3niti Multimedia Academy" class="h-full object-cover">
+                                  
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold deep-blue-text mb-3">3niti Multimedia Academy</h3>
+                        <p class="text-gray-600 mb-4">
+                            A platform dedicated to equipping teens & children with digital, multimedia, and coding skills. As CEO, Moses has developed comprehensive training programs that empower the next generation with technical expertise and creative innovation.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">Multimedia Production Training</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">Coding & Digital Skills Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle gold-text mr-2"></i>
+                                <span class="text-gray-700">Leadership & Innovation Programs</span>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" class="btn-primary rounded-lg px-6 py-2 inline-flex items-center">
+                                Explore Courses <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold deep-blue-text mb-4">Awards & Recognition</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 flex-shrink-0 gold-bg rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-award text-deep-blue-text text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold deep-blue-text mb-1">Top 6% Nigerian Executives</h4>
+                                <p class="text-gray-600 text-sm">Ranked among the top 6% of Nigerian executives in Entertainment & Media in 2015.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 flex-shrink-0 gold-bg rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-trophy text-deep-blue-text text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold deep-blue-text mb-1">Award of Excellence</h4>
+                                <p class="text-gray-600 text-sm">Received the "Award of Excellence" in 2015 for outstanding contributions to multimedia and IT.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 flex-shrink-0 gold-bg rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-book text-deep-blue-text text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold deep-blue-text mb-1">Nigerian Top Executives</h4>
+                                <p class="text-gray-600 text-sm">Featured in the premier publication of "Nigerian Top Executives in Entertainment & Media 2015".</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 flex-shrink-0 gold-bg rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user-graduate text-deep-blue-text text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold deep-blue-text mb-1">Educational Excellence</h4>
+                                <p class="text-gray-600 text-sm">Graduate of the University of Lagos with a degree in Computer Science and a Post Graduate Diploma in Public Relations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family & Legacy -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Family & Legacy</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-96 bg-gray-200 relative">
+                        <!-- Placeholder for family image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/L22ASZ8.jpeg" alt="Family Portrait" class="h-full object-cover">
+                                
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold deep-blue-text mb-3">The Bolarin Family</h3>
+                        <p class="text-gray-600 mb-4">
+                            At the heart of Moses' story is his beloved family. He is blessed with two children, Misi and Mayo, who have inspired several of his children's books.
+                        </p>
+                        <p class="text-gray-600">
+                            The Bolarin family embodies the principles of faith, creativity, and excellence that define Moses' work and ministry. Their shared journey has been integral to Moses' impact across various spheres of influence.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-3">Misi & Mayo Bolarin</h3>
+                            <p class="text-gray-600 mb-3">
+                                Beyond his public ministry, Moses is a devoted father to his children Misi and Mayo. Moses' children have been both inspiration and collaborators in his creative work, particularly in the development of children's books like the "Misi & Miffy" series and other educational content.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-book gold-text mr-2"></i>
+                                <span>Inspiration for Children's Books</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-3">Mentorship Legacy</h3>
+                            <p class="text-gray-600 mb-3">
+                                Moses draws inspiration from spiritual mentors including Pastor E.A. Adeboye, Bishop David Oyedepo, and Pastor Tony Olukoyede, whose influence has shaped his ministry and leadership approach.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-hands-helping gold-text mr-2"></i>
+                                <span>Continuing the Chain of Mentorship</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-3">Multigenerational Impact</h3>
+                            <p class="text-gray-600 mb-3">
+                                Moses' legacy extends through books, mentorship programs and discipleship initiatives that equip the next generation of Kingdom leaders.
+                            </p>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-hands-helping gold-text mr-2"></i>
+                                <span>Extending his Multigenerational Legacy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section (E-commerce) -->
+    <section id="shop" class="py-16 light-gold-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-6 deep-blue-text">Shop</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Explore and purchase Moses Olanrewaju Bolarin's books, music, courses, and multimedia resources. Transform your life, business, and spiritual journey with these carefully crafted products.
+            </p>
+            
+            <!-- Shop Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="bg-deep-blue-bg text-white font-bold px-4 py-2 rounded-full">All Products</button>
+                <button class="bg-white text-gray-600 font-bold px-4 py-2 rounded-full hover:bg-gray-100">Books</button>
+                <button class="bg-white text-gray-600 font-bold px-4 py-2 rounded-full hover:bg-gray-100">Music</button>
+                <button class="bg-white text-gray-600 font-bold px-4 py-2 rounded-full hover:bg-gray-100">Courses</button>
+                <button class="bg-white text-gray-600 font-bold px-4 py-2 rounded-full hover:bg-gray-100">Digital Products</button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- Book 1 -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/IXRtx9n.png" alt="Mysteries of the Kingdom - Book 3" class="h-full object-cover">
+                                
+                            </span>
+                        </div>
+                        <div class="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
+                            NEW!
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Mysteries of the Kingdom - 3</h4>
+                        <p class="text-gray-600 text-sm mb-2">Golden Jubilee Edition (2024)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$27.99</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book 2 -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/L37wTVm.png" alt="Mysteries of the Kingdom - Book 2" class="h-full object-cover">
+                               </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Mysteries of the Kingdom - 2</h4>
+                        <p class="text-gray-600 text-sm mb-2">Advanced Kingdom Truths (2018)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$14.99</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Book 3 -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/jASl5PB.png" alt="Mysteries of the Kingdom - Book 1" class="h-full object-cover">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Mysteries of the Kingdom - 1</h4>
+                        <p class="text-gray-600 text-sm mb-2">Foundations of God's Kingdom (2012)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$10.00</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Music Album -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for album cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            <img src="https://i.imgur.com/x7zSuxs.png" alt="Jehovah Nissi Album" class="w-full object-cover">
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Jehovah Nissi Album (8 Tracks)</h4>
+                        <p class="text-gray-600 text-sm mb-2">Digital Download / Streaming Access</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$7.99</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Business Book -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/Mextj4d.png" alt="12 Simple Strategies" class="h-full object-cover">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">12 Simple Strategies to Becoming a Global Brand</h4>
+                        <p class="text-gray-600 text-sm mb-2">Practical branding guide for businesses</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$9.90</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for course image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/8A3Qa7q.png" alt="Multimedia Production Course" class="h-full object-cover">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Multimedia Production Essentials</h4>
+                        <p class="text-gray-600 text-sm mb-2">Online Course (15 Hours)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$199.00</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Children's Book -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for book cover -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/xy1vqSG.png" alt="Misi & Miffy" class="h-full object-cover">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Misi & Miffy</h4>
+                        <p class="text-gray-600 text-sm mb-2">Children's Adventure Book</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$2.99</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Digital Product -->
+                <div class="book-card bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-40 bg-gray-200 relative">
+                        <!-- Placeholder for product image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/2qFZmwd.png" alt="Who Told You to Stop Dreaming - E-book & Video Combo" class="h-full object-cover">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold deep-blue-text mb-1 truncate">Who Told You to Stop Dreaming - E-book & Video Combo</h4>
+                        <p class="text-gray-600 text-sm mb-2">Digital Download (PDF + Video)</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold gold-text">$7.99</span>
+                            <button class="btn-primary rounded-lg px-3 py-1 text-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <button class="btn-secondary font-bold px-8 py-3 rounded-lg text-lg inline-flex items-center">
+                    View More Products <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <section id="Gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Photo Gallery</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="lightgallery">
+                <!-- Gallery Item 1 -->
+                <a href="https://i.imgur.com/q9kW0sY.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/q9kW0sY.jpeg" alt="Moses Olanrewaju Bolarin" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 2 -->
+                <a href="https://i.imgur.com/nZ59NCh.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/nZ59NCh.jpeg" alt="LanBo-Moe Logo" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 3 -->
+                <a href="https://i.imgur.com/GSVuD5l.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/GSVuD5l.jpeg" alt="Book Signing Event" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 4 -->
+                <a href="https://i.imgur.com/bO2AWM2.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/bO2AWM2.jpeg" alt="Ministry Work" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 5 -->
+                <a href="https://i.imgur.com/1hD5BuB.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/1hD5BuB.jpeg" alt="Speaking Engagement" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 6 -->
+                <a href="https://i.imgur.com/3gUuGEA.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/3gUuGEA.jpeg" alt="Worship Ministry" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 7 -->
+                <a href="https://i.imgur.com/6JVuZHV.jpeg" class="gallery-item">
+                    <img src="https://i.imgur.com/6JVuZHV.jpeg" alt="Family Photo" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+                
+                <!-- Gallery Item 8 -->
+                <a href="https://i.imgur.com/04kSV2t.png" class="gallery-item">
+                    <img src="https://i.imgur.com/04kSV2t.png" alt="Book Launch" class="w-full h-64 object-cover rounded-lg shadow-md">
+                </a>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://mobolarinportfolio.blogspot.com/" target="_blank" class="inline-block blue-bg text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300">View Portfolio Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 deep-blue-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gold-text">What Others Say</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">Apostle Tony Olukoyede</h4>
+                            <p class="text-white text-opacity-70 text-sm">Mentor & Spiritual Leader</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "The Kingdom of God is shrouded in mysteries.  These mysteries are all expressions of God’s unusual and uncommon divine nature reflected in the interwoven complexities of His unsearchable wisdom, creativity, power, and majesty. Here in this great piece that you are holding in your hands, Pastor Lanre Bolarin has done a good job by the help of the Holy Spirit by bringing some of these Kingdom Mysteries to our consciousness, and presenting them in such a simple manner that all may read, understand, and appropriate to their personal lives and situations, and go on to live a victorious and purposeful Christian Life now and always. I highly recommend this book to you and your loved ones as a must read!  Enjoy it"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">Pastor Ebenezer Oyesusi </h4>
+                            <p class="text-white text-opacity-70 text-sm">Associate Pastor, His Purpose Church, Nigeria.</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "Mysteries of the Kingdom – Book 3 is a visually rich and spiritually powerful guide that brings divine truths to life. With stunning illustrations and timeless wisdom, this inspiring conclusion to the trilogy reveals deep Kingdom insights, practical keys to victorious living, and transformative revelations for every believer. 
+Whether you are seeking clarity, purpose, or a deeper walk with God, this book will ignite your faith and empower you to live fully in His abundance."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">Bayo Falode</h4>
+                            <p class="text-white text-opacity-70 text-sm">Senior Project Consultant, Director Ark Project Partners Ltd
+
+PMO Global Awards Judging Committee Member</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "Moses is a highly personable and astute developer of innovative frontiers in the Media Industry - A Pacesetter. Always ahead of the curve and breaking new grounds. Not only does he led his companies into such higher grounds of consistent achievements, he also challenges us his clients and partners by showing the way. He leads by 'having done'. Moses has an amazing ability to get people on-side and working together. He also builds great relationships with client's senior stakeholders. He was and is an asset to our growth. Highly recommended." (April 16, 2020)
+                    </p>
+                </div>
+
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">Pastor Tony Olukoyede</h4>
+                            <p class="text-white text-opacity-70 text-sm">Mentor & Spiritual Leader</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "Moses' teachings on Kingdom mysteries are revolutionary. His ability to illuminate complex spiritual concepts makes his work a must-read for every believer seeking deeper understanding."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">Amazon Reviewer</h4>
+                            <p class="text-white text-opacity-70 text-sm">Verified Purchase</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "Book 3 of Mysteries of the Kingdom transformed my prayer life. The insights are profound yet practical, offering a fresh perspective on spiritual growth. Truly a masterpiece!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card bg-white bg-opacity-10 rounded-xl p-6 page-break-avoid">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-bg flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-deep-blue-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold gold-text">3niti Academy Student</h4>
+                            <p class="text-white text-opacity-70 text-sm">Multimedia Course Graduate</p>
+                        </div>
+                    </div>
+                    <p class="text-white text-opacity-90 italic">
+                        "The multimedia training at 3niti Academy changed my career trajectory. Pastor Moses combines technical expertise with spiritual principles in a way that's practical, inspiring, and life-changing!"
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div class="bg-light-gold-bg rounded-xl shadow-md p-8 page-break-avoid">
+                <h2 class="text-3xl font-bold text-center mb-6 deep-blue-text">Join the LanBo-Moe Community</h2>
+                <p class="text-center text-gray-600 mb-8">
+                    Subscribe to receive exclusive content, updates on new releases, and special offers directly to your inbox.
+                </p>
+                
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="text-center mb-6">
+                        <span class="inline-block bg-deep-blue-bg text-white font-bold px-4 py-2 rounded-full text-sm">
+                            <i class="fas fa-gift mr-1"></i> FREE GIFT WITH SIGNUP
+                        </span>
+                    </div>
+                    
+                    <p class="text-center text-gray-700 font-bold mb-6">
+                        Get a FREE chapter from Mysteries of the Kingdom – Book 1 + Exclusive Worship Track!
+                    </p>
+                    
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">I'm interested in...</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests[]" value="books" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">Books</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests[]" value="music" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">Music</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests[]" value="courses" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">Courses</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="interests[]" value="ministry" class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                    <span class="ml-2 text-sm text-gray-700">Ministry</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn-secondary font-bold px-8 py-3 rounded-lg text-lg inline-flex items-center">
+                                Unlock Free Gifts <i class="fas fa-unlock-alt ml-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 light-gold-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Contact & Connect</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold deep-blue-text mb-6">Get in Touch</h3>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="contact-name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="contact-email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div>
+                                <label for="contact-subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <select id="contact-subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Please select a topic</option>
+                                    <option value="speaking">Speaking Engagement</option>
+                                    <option value="ministry">Ministry Inquiry</option>
+                                    <option value="business">Business Consultation</option>
+                                    <option value="courses">Courses & Training</option>
+                                    <option value="books">Books & Publications</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="contact-message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn-primary font-bold px-8 py-3 rounded-lg text-lg">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-4">Connect with Moses</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fab fa-youtube text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">YouTube</h5>
+                                        <a href="https://www.youtube.com/@ANewYouWithMoses" target="_blank" class="text-blue-600 hover:underline text-sm">A New You with Moses</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fab fa-facebook text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Facebook</h5>
+                                        <a href="https://www.facebook.com/olanrewaju.bolarin/" target="_blank" class="text-blue-600 hover:underline text-sm">Moses Olanrewaju Bolarin</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fab fa-linkedin text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">LinkedIn</h5>
+                                        <a href="https://ng.linkedin.com/in/moses-olanrewaju-bolarin-00990026" target="_blank" class="text-blue-600 hover:underline text-sm">Moses Olanrewaju Bolarin</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Instagram</h5>
+                                        <a href="https://www.instagram.com/anewyouwithmoses/" target="_blank" class="text-blue-600 hover:underline text-sm">@anewyouwithmoses</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-4">Business Inquiries</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fas fa-building text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">Majestic World of Business</h5>
+                                        <p class="text-gray-600 text-sm">Global Strategy & Business Consulting</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-deep-blue-bg flex items-center justify-center mr-4">
+                                        <i class="fas fa-graduation-cap text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold deep-blue-text">3niti Multimedia Academy</h5>
+                                        <p class="text-gray-600 text-sm">Training & Skills Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold deep-blue-text mb-4">Speaking Engagements</h3>
+                            <p class="text-gray-600 mb-4">
+                                Invite Moses to speak at your conference, church event, or business workshop. His compelling insights on Kingdom principles, business strategy, and personal development have inspired audiences worldwide.
+                            </p>
+                            <a href="#" class="btn-primary rounded-lg px-6 py-2 inline-flex items-center text-sm">
+                                Request Speaking Info <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="deep-blue-bg text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                <img src="https://i.imgur.com/xo4x8sA.png" alt="LanBo-Moe Logo" class="logo-img">
+                    </h3>
+                    <p class="text-gray-400 mb-4">
+                        Bridging Faith, Creativity & Innovation through books, music, training, and multimedia solutions.
+                    </p>
+                    <div class="golden-jubilee-badge inline-block bg-black rounded-lg p-2 mb-4">
+                        <div class="text-center">
+                            <span class="block text-xs text-white">Celebrating</span>
+                            <span class="block text-sm font-bold gold-text">50 YEARS OF GRACE</span>
+                            <span class="block text-xs text-white">Dec 3, 2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="#books" class="text-gray-400 hover:text-white transition-colors duration-300">Books</a></li>
+                        <li><a href="#music" class="text-gray-400 hover:text-white transition-colors duration-300">Music</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-300">Services</a></li>
+                        <li><a href="#shop" class="text-gray-400 hover:text-white transition-colors duration-300">Shop</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Ventures</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Majestic World of Business</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">3niti Multimedia Academy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">A New You with Moses</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Book Publishing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Music & Worship</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Social Media</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.youtube.com/@ANewYouWithMoses" target="_blank" class="text-white hover:text-gold-text transition-colors duration-300">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/OlanrewajuBolarin" target="_blank" class="text-white hover:text-gold-text transition-colors duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/anewyouwithmoses/" target="_blank" class="text-white hover:text-gold-text transition-colors duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://ng.linkedin.com/in/moses-olanrewaju-bolarin-00990026" target="_blank" class="text-white hover:text-gold-text transition-colors duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Newsletter</h3>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-red text-red rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow">
+                        <button class="bg-gold-bg text-deep-blue-text px-3 py-2 rounded-r-lg font-bold">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p class="mb-2">© 2024 LanBo-Moe | Moses Olanrewaju Bolarin. All Rights Reserved.</p>
+                <p>
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Designed by Majestic World of Business</a>
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for basic interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[aria-controls="mobile-menu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    mobileMenu.style.display = expanded ? 'none' : 'block';
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for header height
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (mobileMenu && mobileMenu.style.display === 'block') {
+                            mobileMenuButton.setAttribute('aria-expanded', 'false');
+                            mobileMenu.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
