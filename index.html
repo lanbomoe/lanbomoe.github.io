@@ -9,13 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #B8860B;
-            --deep-blue: #000080;
+            --gold: #A68024;
+            --deep-blue: #800080;
             --light-gold: #FFF2CC;
-            --earth-brown: #8B4513;
-            --light-brown: #D2B48C;
+            --earth-brown: #333333;
+            --light-brown: #FFFFFF;
         }
         body {
+        
+        <iframe 
+          src="https://l.facebook.com/l.php?u=https%3A%2F%2Fforms.gle%2Fzf9yrLY3GpficFZH9%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExaENTV3puWVU1RXM5OUxwMAEeepfsf05pGBwo1mVDx1SqOlnsnc2c1CvBzStPlMpt1AajW7a9I0HRq5p4DWs_aem_y1Rn22suZZG0TmQ_H08MRw&h=AT3-7DuFebkA7jb1DWisrdq1CQGGKcN-jiZ0bgsa_kOH7esG6Y3WjzqsEGzhoKVUGD8NZKqKB9l5FfQNcEL6Sh7ssGlDnyv9wCyO3o6TPXzr2_ztOuyBJgISXWinUytENqKDzDSH2AfXbw&__tn__=-UK-R&c[0]=AT1cZWQYhEuOuqCjIP4SLCaY-4lh_wBpla3w_g2bksBZmsQqfMHG0GwDAtzWMqZl061eDoTM1wXgWuWvmEPge6jvxRWhxp79isew23eX-PJFK2QhKkuVRQT0zhYcYD9npjRLX3cW3WnQjGp-DZCkhsnBX6lvZVpva-pkbUknHJ5TLyjqDDbSz4ePRRHv55l51V1eOg84fj11F3PIkagWPh_z?embedded=true"
+          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+          Loading…
+        </iframe>
+ 
             font-family: 'Lato', sans-serif;
             color: #333;
         }
@@ -190,71 +197,46 @@
             }
         }
     </style>
-</head>
-<body class="bg-gray-50 min-h-screen">
-    <!-- Main Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-2xl font-bold">
-                            <span class="gold-text"></span><span class="deep-blue-text"></span>
-                        </h1>
-                    </div>
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-32"> <!-- Increased height -->
+            <div class="flex items-center space-x-6">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="<?php echo esc_url( home_url('/') ); ?>">
+                        <img src="https://i.imgur.com/QV6RCTr.png" alt="LanBo‑Moe" style="max-height: 120px; height: auto; width: auto;" />
+                    </a>
+                </div>
 
-                                    <div class="flex items-center space-x-2">
-                <img src="https://i.imgur.com/xo4x8sA.png" alt="LanBo-Moe Logo" class="logo-img">
+                <!-- Menu -->
+                <div class="hidden sm:flex sm:space-x-6 items-center h-full">
+                    <a href="#home" class="nav-link text-sm font-medium text-gray-900">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">About</a>
+                    <a href="#books" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Books</a>
+                    <a href="#music" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Music</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Services</a>
+                    <a href="#shop" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Shop</a>
+                    <a href="#Gallery" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Gallery</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Contact</a>
+                </div>
             </div>
 
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="#home" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900">Home</a>
-                        <a href="#about" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">About</a>
-                        <a href="#books" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Books</a>
-                        <a href="#music" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Music</a>
-                        <a href="#services" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Services</a>
-                        <a href="#shop" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Shop</a>
-                        <a href="#Gallery" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Gallery</a>
-                        <a href="#contact" class="nav-link inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-gray-900">Contact</a>
-                    </div>
-                </div>
-                <div class="hidden sm:ml-6 sm:flex sm:items-center">
-                    <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
-                        <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
-                    </button>
-                </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <!-- Mobile menu button -->
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+            <!-- Cart Button -->
+            <div class="hidden sm:flex items-center">
+                <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
+                    <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
+                </button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="-mr-2 flex items-center sm:hidden">
+                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
-
-        <!-- Mobile menu, show/hide based on menu state -->
-        <div class="sm:hidden" id="mobile-menu" style="display: none;">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="#home" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-900 border-l-4 border-indigo-500">Home</a>
-                <a href="#about" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">About</a>
-                <a href="#books" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Books</a>
-                <a href="#music" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Music</a>
-                <a href="#services" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Services</a>
-                <a href="#shop" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Shop</a>
-                <a href="#Gallery" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Gallery</a>
-                <a href="#contact" class="nav-link block pl-3 pr-4 py-2 text-base font-medium text-gray-500 hover:text-gray-900 hover:bg-gray-50 border-l-4 border-transparent hover:border-gray-300">Contact</a>
-            </div>
-            <div class="pt-4 pb-3 border-t border-gray-200">
-                <div class="flex items-center px-4">
-                    <div class="flex-shrink-0">
-                        <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
-                            <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white py-20 min-h-screen flex items-center">
@@ -1052,16 +1034,179 @@ The crown jewel of the trilogy, unveiled for Moses' 50th birthday celebration, f
     <!-- Services Section -->
     <section id="services" class="py-16 light-gold-bg">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Entrepreneurship & Leadership</h2>
-            
+
+<head>
+  <style>
+    .title-section {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .title-section h1 {
+      font-size: 3rem; /* Bigger title */
+      font-weight: bold;
+      color: #A68024; /* Dark Gold */
+      margin-bottom: 0.5rem;
+    }
+
+    .title-section p {
+      font-size: 1.5rem; /* Subtitle size */
+      color: #800080; /* Purple */
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="title-section">
+      <h1>Welcome to LanBo-Moe</h1>
+      <p>Transforming Lives Through Faith, Creativity & Innovation</p>
+    </div>
+  </main>
+</body>
+
+    <style>
+        :root {
+          --dark-gold: #A68024;
+          --purple-accent: #800080;
+          --white-bg: #FFFFFF;
+          --text-dark: #333333;
+        }
+        body {
+          margin: 0;
+          font-family: Lato, sans-serif;
+          background-color: var(--white-bg);
+          color: var(--text-dark);
+        }
+        header {
+          background-color: var(--white-bg);
+          padding: 1rem;
+          display: flex;
+          align-items: center;
+          box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        header img {
+          height: 60px;
+        }
+        nav a {
+          margin-left: 1rem;
+          text-decoration: none;
+          color: var(--text-dark);
+          font-weight: bold;
+        }
+        main {
+          padding: 2rem;
+        }
+        h1 {
+          color: var(--dark-gold);
+          margin-bottom: 0.5rem;
+        }
+        p {
+          font-size: 1.1rem;
+          line-height: 1.5;
+        }
+        .button-group {
+          display: flex;
+          gap: 1rem;
+          margin: 1.5rem 0;
+        }
+        .button-group a {
+          flex: 1;
+          padding: 0.75rem;
+          background-color: var(--purple-accent);
+          color: var(--white-bg);
+          text-decoration: none;
+          font-weight: bold;
+          text-align: center;
+          border-radius: 4px;
+          transition: background-color 0.2s ease;
+        }
+        .button-group a:hover {
+          background-color: var(--dark-gold);
+        }
+        .darkgold-banner {
+          background-color: var(--dark-gold);
+          color: var(--white-bg);
+          text-align: center;
+          padding: 1rem;
+          margin-top: 2rem;
+          font-weight: bold;
+        }
+        section h2 {
+          color: var(--purple-accent);
+          margin-bottom: 0.5rem;
+        }
+        section ul {
+          list-style: none;
+          padding: 0;
+        }
+        section ul li {
+          margin-bottom: 0.5rem;
+        }
+        section a.link-button {
+          display: inline-block;
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 1rem;
+          background-color: var(--purple-accent);
+          color: var(--white-bg);
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.2s ease;
+        }
+        section a.link-button:hover {
+          background-color: var(--dark-gold);
+        }
+        footer {
+          background-color: #F0F0F0;
+          text-align: center;
+          padding: 1rem;
+          margin-top: 2rem;
+        }
+    </style>
+
+        <div class="button-group">
+            <a href="https://3nitimultimedia.blogspot.com/">3niti Multimedia Academy</a>
+            <a href="https://majesticmultimediaacademy.blogspot.com/">Majestic Multimedia Academy</a>
+            <a href="https://majesticwb.blogspot.com/p/corporate-statements_669.html">Majestic World of Business Services</a>
+        </div>
+        
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf8JCS4vi_MLRSKYM_mVj1hBxMO2RvxbPwDAkNMgHAVf5Vzrg/viewform?embedded=true"
+          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
+          Loading…
+        </iframe>
+                <!-- 3niti Multimedia Academy -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
+                    <div class="h-96 bg-gray-200 relative">
+                        <!-- Placeholder for academy image -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-gray-500">
+                            	<img src="https://i.imgur.com/qHohF4D.jpeg" alt="Global Skills Exchange (GSE) Hub" class="h-full object-cover">
+                                  
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold deep-blue-text mb-3"></h3>
+                        <p class="text-gray-600 mb-4">
+                            
+                        </p>        
+        <div class="darkgold-banner">
+          Coming Soon: Global Skills Exchange (GSE) Hub
+        </div>
+  <!-- Next Section -->
+  <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text"></h2>
+  <h2 class="text-3xl font-bold text-center mb-12 deep-blue-text">Entrepreneurship & Leadership</h2>
+</main>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <!-- Majestic World of Business -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
-                    <div class="h-48 bg-gray-200 relative">
+                    <div class="h-60 bg-gray-200 relative">
                         <!-- Placeholder for company image -->
                         <div class="absolute inset-0 flex items-center justify-center">
                             <span class="text-gray-500">
-                            	<img src="https://i.imgur.com/z0xajdv.png" alt="Majestic World of Business" class="h-full object-cover">
+                            	<img src="https://i.imgur.com/8GxoD20.png" alt="Majestic World of Business" class="h-full object-cover">
                                 
                             </span>
                         </div>
@@ -1095,11 +1240,11 @@ The crown jewel of the trilogy, unveiled for Moses' 50th birthday celebration, f
                 
                 <!-- 3niti Multimedia Academy -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden page-break-avoid">
-                    <div class="h-48 bg-gray-200 relative">
+                    <div class="h-60 bg-gray-200 relative">
                         <!-- Placeholder for academy image -->
                         <div class="absolute inset-0 flex items-center justify-center">
                             <span class="text-gray-500">
-                            	<img src="https://i.imgur.com/KOuxVyN.png" alt="3niti Multimedia Academy" class="h-full object-cover">
+                            	<img src="https://i.imgur.com/bHLo18S.jpeg" alt="3niti Multimedia Academy" class="h-full object-cover">
                                   
                             </span>
                         </div>
@@ -1700,7 +1845,7 @@ PMO Global Awards Judging Committee Member</p>
                             
                             <div class="text-center">
                                 <button type="submit" class="btn-primary font-bold px-8 py-3 rounded-lg text-lg">
-                                    Send Message
+                                    <a class="link-button" href="mailto:3nitimultimedia@gmail.com?subject=Send%20Message">Send Message</a>
                                 </button>
                             </div>
                         </form>
@@ -1790,7 +1935,7 @@ PMO Global Awards Judging Committee Member</p>
                             <p class="text-gray-600 mb-4">
                                 Invite Moses to speak at your conference, church event, or business workshop. His compelling insights on Kingdom principles, business strategy, and personal development have inspired audiences worldwide.
                             </p>
-                            <a href="#" class="btn-primary rounded-lg px-6 py-2 inline-flex items-center text-sm">
+                            <a href="https://wa.me/+2348033830101" class="btn-primary rounded-lg px-6 py-2 inline-flex items-center text-sm">
                                 Request Speaking Info <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -1800,25 +1945,25 @@ PMO Global Awards Judging Committee Member</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="deep-blue-bg text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">
-                <img src="https://i.imgur.com/xo4x8sA.png" alt="LanBo-Moe Logo" class="logo-img">
-                    </h3>
-                    <p class="text-gray-400 mb-4">
-                        Bridging Faith, Creativity & Innovation through books, music, training, and multimedia solutions.
-                    </p>
-                    <div class="golden-jubilee-badge inline-block bg-black rounded-lg p-2 mb-4">
-                        <div class="text-center">
-                            <span class="block text-xs text-white">Celebrating</span>
-                            <span class="block text-sm font-bold gold-text">50 YEARS OF GRACE</span>
-                            <span class="block text-xs text-white">Dec 3, 2024</span>
-                        </div>
+<!-- Footer -->
+<footer class="deep-blue-bg text-white py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
+            <div class="text-center">
+                <div class="mb-4">
+                    <img src="https://i.imgur.com/Fsp0AMe.png" alt="LanBo‑Moe" style="max-height: 200px; height: auto; width: auto; max-width: 100%; margin: 0 auto;" />
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Bridging Faith, Creativity & Innovation through books, music, training, and multimedia solutions.
+                </p>
+                <div class="golden-jubilee-badge inline-block bg-black rounded-lg p-2 mb-4">
+                    <div class="text-center">
+                        <span class="block text-xs text-white">Celebrating</span>
+                        <span class="block text-sm font-bold gold-text">50 YEARS OF GRACE</span>
+                        <span class="block text-xs text-white">Dec 3, 2024</span>
                     </div>
                 </div>
+            </div>
                 
                 <div>
                     <h3 class="text-lg font-bold mb-4">Quick Links</h3>
@@ -1836,11 +1981,11 @@ PMO Global Awards Judging Committee Member</p>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Ventures</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Majestic World of Business</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">3niti Multimedia Academy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">A New You with Moses</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Book Publishing</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Music & Worship</a></li>
+                        <li><a href="https://majesticwb.blogspot.com/p/corporate-statements_669.html" class="text-gray-400 hover:text-white transition-colors duration-300">Majestic World of Business</a></li>
+                        <li><a href="https://3nitimultimedia.blogspot.com/" class="text-gray-400 hover:text-white transition-colors duration-300">3niti Multimedia Academy</a></li>
+                        <li><a href="https://www.youtube.com/@ANewYouWithMoses" class="text-gray-400 hover:text-white transition-colors duration-300">A New You with Moses</a></li>
+                        <li><a href="https://wa.me/+2348033830101" class="text-gray-400 hover:text-white transition-colors duration-300">Book Publishing</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLMkw2-LEViXZdEzml2pvvENifoyZywp0f" class="text-gray-400 hover:text-white transition-colors duration-300">Music & Worship</a></li>
                     </ul>
                 </div>
                 
