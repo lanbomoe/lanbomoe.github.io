@@ -1,253 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LanBo-Moe | Moses Olanrewaju Bolarin</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #A68024;
-            --deep-blue: #800080;
-            --light-gold: #FFF2CC;
-            --earth-brown: #333333;
-            --light-brown: #FFFFFF;
-        }
-        body {
-        
-        <iframe 
-          src="https://l.facebook.com/l.php?u=https%3A%2F%2Fforms.gle%2Fzf9yrLY3GpficFZH9%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExaENTV3puWVU1RXM5OUxwMAEeepfsf05pGBwo1mVDx1SqOlnsnc2c1CvBzStPlMpt1AajW7a9I0HRq5p4DWs_aem_y1Rn22suZZG0TmQ_H08MRw&h=AT3-7DuFebkA7jb1DWisrdq1CQGGKcN-jiZ0bgsa_kOH7esG6Y3WjzqsEGzhoKVUGD8NZKqKB9l5FfQNcEL6Sh7ssGlDnyv9wCyO3o6TPXzr2_ztOuyBJgISXWinUytENqKDzDSH2AfXbw&__tn__=-UK-R&c[0]=AT1cZWQYhEuOuqCjIP4SLCaY-4lh_wBpla3w_g2bksBZmsQqfMHG0GwDAtzWMqZl061eDoTM1wXgWuWvmEPge6jvxRWhxp79isew23eX-PJFK2QhKkuVRQT0zhYcYD9npjRLX3cW3WnQjGp-DZCkhsnBX6lvZVpva-pkbUknHJ5TLyjqDDbSz4ePRRHv55l51V1eOg84fj11F3PIkagWPh_z?embedded=true"
-          width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">
-          Loading…
-        </iframe>
- 
-            font-family: 'Lato', sans-serif;
-            color: #333;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(120deg, var(--deep-blue), #1a1a4e);
-        }
-        .gold-text {
-            color: var(--gold);
-        }
-        .deep-blue-text {
-            color: var(--deep-blue);
-        }
-        .gold-border {
-            border-color: var(--gold);
-        }
-        .gold-bg {
-            background-color: var(--gold);
-        }
-        .deep-blue-bg {
-            background-color: var(--deep-blue);
-        }
-        .earth-bg {
-            background-color: var(--earth-brown);
-        }
-        .light-gold-bg {
-            background-color: var(--light-gold);
-        }
-        .shadow-gold {
-            box-shadow: 0 4px 14px rgba(255, 215, 0, 0.25);
-        }
-        .shadow-blue {
-            box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25);
-        }
-        .btn-primary {
-            background-color: var(--deep-blue);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #000066;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background-color: var(--gold);
-            color: var(--deep-blue);
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #e6c200;
-            transform: translateY(-2px);
-        }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--gold);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        .book-card, .service-card, .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .book-card:hover, .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .highlight-box {
-            border-left: 4px solid var(--gold);
-        }
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: var(--gold);
-        }
-        .timeline-item:after {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 25px;
-            width: 1px;
-            height: calc(100% - 15px);
-            background: var(--gold);
-        }
-        .timeline-item:last-child:after {
-            display: none;
-        }
-        .golden-jubilee-badge {
-            position: relative;
-            overflow: hidden;
-        }
-        .golden-jubilee-badge:before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% {
-                transform: scale(0.95);
-                opacity: 0.7;
-            }
-            50% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(0.95);
-                opacity: 0.7;
-            }
-        }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.8s forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .slide-in-left {
-            opacity: 0;
-            animation: slideInLeft 0.8s forwards;
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .slide-in-right {
-            opacity: 0;
-            animation: slideInRight 0.8s forwards;
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        /* Cart styles */
-        .cart-item {
-            border-bottom: 1px solid #eaeaea;
-        }
-        /* Make sure all content is optimized for PDF export */
-        @media print {
-            body {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-            }
-            .page-break-avoid {
-                page-break-inside: avoid;
-            }
-        }
-    </style>
-<nav class="bg-white shadow-md sticky top-0 z-50">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LanBo-Moe | Moses Olanrewaju Bolarin</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #A68024;
+      --deep-blue: #800080;
+      --light-gold: #FFF2CC;
+      --earth-brown: #333333;
+      --light-brown: #FFFFFF;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-gradient { background: linear-gradient(120deg, var(--deep-blue), #1a1a4e); }
+    .gold-text { color: var(--gold); }
+    .deep-blue-text { color: var(--deep-blue); }
+    .gold-border { border-color: var(--gold); }
+    .gold-bg { background-color: var(--gold); }
+    .deep-blue-bg { background-color: var(--deep-blue); }
+    .earth-bg { background-color: var(--earth-brown); }
+    .light-gold-bg { background-color: var(--light-gold); }
+    .shadow-gold { box-shadow: 0 4px 14px rgba(255, 215, 0, 0.25); }
+    .shadow-blue { box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25); }
+    .btn-primary {
+      background-color: var(--deep-blue);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #000066;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background-color: var(--gold);
+      color: var(--deep-blue);
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: #e6c200;
+      transform: translateY(-2px);
+    }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    .book-card, .service-card, .testimonial-card {
+      transition: all 0.3s ease;
+    }
+    .book-card:hover, .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .highlight-box {
+      border-left: 4px solid var(--gold);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 30px;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .timeline-item:after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 25px;
+      width: 1px;
+      height: calc(100% - 15px);
+      background: var(--gold);
+    }
+    .timeline-item:last-child:after { display: none; }
+    .golden-jubilee-badge { position: relative; overflow: hidden; }
+    .golden-jubilee-badge:before {
+      content: '';
+      position: absolute;
+      top: -20px; left: -20px; right: -20px; bottom: -20px;
+      background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.7; }
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .slide-in-left {
+      opacity: 0;
+      animation: slideInLeft 0.8s forwards;
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .slide-in-right {
+      opacity: 0;
+      animation: slideInRight 0.8s forwards;
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .cart-item { border-bottom: 1px solid #eaeaea; }
+    @media print {
+      body { width: 100%; margin: 0; padding: 0; }
+      .page-break-avoid { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-32"> <!-- Increased height -->
-            <div class="flex items-center space-x-6">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="<?php echo esc_url( home_url('/') ); ?>">
-                        <img src="https://i.imgur.com/QV6RCTr.png" alt="LanBo‑Moe" style="max-height: 120px; height: auto; width: auto;" />
-                    </a>
-                </div>
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center space-x-6">
+          <div class="flex-shrink-0">
+            <a href="index.html">
+              <img src="https://i.imgur.com/QV6RCTr.png" alt="LanBo‑Moe" style="max-height: 60px; height: auto; width: auto;" />
+            </a>
+          </div>
+          <div class="hidden sm:flex sm:space-x-6 items-center h-full">
+            <a href="#home" class="nav-link text-sm font-medium text-gray-900">Home</a>
+            <a href="#about" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">About</a>
+            <a href="#books" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Books</a>
+            <a href="#music" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Music</a>
+            <a href="#services" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Services</a>
+            <a href="#shop" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Shop</a>
+            <a href="#Gallery" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Gallery</a>
+            <a href="#newsletter" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Newsletter</a>
+            <a href="#contact" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Contact</a>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center">
+          <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
+            <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
+          </button>
+        </div>
+        <div class="sm:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-500 focus:outline-none">
+            <i class="fas fa-bars fa-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden sm:hidden px-4 pb-4">
+      <a href="#home" class="block py-2 nav-link">Home</a>
+      <a href="#about" class="block py-2 nav-link">About</a>
+      <a href="#books" class="block py-2 nav-link">Books</a>
+      <a href="#music" class="block py-2 nav-link">Music</a>
+      <a href="#services" class="block py-2 nav-link">Services</a>
+      <a href="#shop" class="block py-2 nav-link">Shop</a>
+      <a href="#Gallery" class="block py-2 nav-link">Gallery</a>
+      <a href="#newsletter" class="block py-2 nav-link">Newsletter</a>
+      <a href="#contact" class="block py-2 nav-link">Contact</a>
+    </div>
+  </nav>
 
-                <!-- Menu -->
-                <div class="hidden sm:flex sm:space-x-6 items-center h-full">
-                    <a href="#home" class="nav-link text-sm font-medium text-gray-900">Home</a>
-                    <a href="#about" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">About</a>
-                    <a href="#books" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Books</a>
-                    <a href="#music" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Music</a>
-                    <a href="#services" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Services</a>
-                    <a href="#shop" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Shop</a>
-                    <a href="#Gallery" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Gallery</a>
-                    <a href="#newsletter" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Newsletter</a>
-                    <a href="#contact" class="nav-link text-sm font-medium text-gray-500 hover:text-gray-900">Contact</a>
-                </div>
-            </div>
+  <script>
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
-            <!-- Cart Button -->
-            <div class="hidden sm:flex items-center">
-                <button type="button" class="btn-secondary rounded-full font-bold px-4 py-2 text-sm">
-                    <i class="fas fa-shopping-cart mr-2"></i> Cart (0)
-                </button>
-            </div>
-
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  <!-- MailerLite Universal Script -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '1584322');
-</script>
-<!-- End MailerLite Universal -->
-
-            <!-- Mobile Menu Toggle -->
-            <div class="-mr-2 flex items-center sm:hidden">
-                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</nav>
+  </script>
+</body>
+</html>
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white py-20 min-h-screen flex items-center">
