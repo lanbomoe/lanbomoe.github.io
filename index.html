@@ -2,157 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LanBo-Moe | Moses Olanrewaju Bolarin</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --gold: #A68024;
-            --deep-blue: #800080;
-            --light-gold: #FFF2CC;
-            --earth-brown: #333333;
-            --light-brown: #FFFFFF;
-        }
-        body {
-            font-family: 'Lato', sans-serif;
-            color: #333;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(120deg, var(--deep-blue), #1a1a4e);
-        }
-        .gold-text { color: var(--gold); }
-        .deep-blue-text { color: var(--deep-blue); }
-        .gold-border { border-color: var(--gold); }
-        .gold-bg { background-color: var(--gold); }
-        .deep-blue-bg { background-color: var(--deep-blue); }
-        .earth-bg { background-color: var(--earth-brown); }
-        .light-gold-bg { background-color: var(--light-gold); }
-        .shadow-gold { box-shadow: 0 4px 14px rgba(255, 215, 0, 0.25); }
-        .shadow-blue { box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25); }
-        .btn-primary {
-            background-color: var(--deep-blue);
-            color: white;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #000066;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            background-color: var(--gold);
-            color: var(--deep-blue);
-            transition: all 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #e6c200;
-            transform: translateY(-2px);
-        }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--gold);
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        .book-card, .service-card, .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .book-card:hover, .service-card:hover {
-            transform: translateY(-10px);
-        }
-        .highlight-box {
-            border-left: 4px solid var(--gold);
-        }
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-        }
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: var(--gold);
-        }
-        .timeline-item:after {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 25px;
-            width: 1px;
-            height: calc(100% - 15px);
-            background: var(--gold);
-        }
-        .timeline-item:last-child:after { display: none; }
-        .golden-jubilee-badge {
-            position: relative;
-            overflow: hidden;
-        }
-        .golden-jubilee-badge:before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: radial-gradient(circle, rgba(255,215,0,0.2) 0%, rgba(255,215,0,0) 70%);
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(0.95); opacity: 0.7; }
-            50% { transform: scale(1); opacity: 1; }
-            100% { transform: scale(0.95); opacity: 0.7; }
-        }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.8s forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .slide-in-left {
-            opacity: 0;
-            animation: slideInLeft 0.8s forwards;
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .slide-in-right {
-            opacity: 0;
-            animation: slideInRight 0.8s forwards;
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .cart-item { border-bottom: 1px solid #eaeaea; }
-        @media print {
-            body { width: 100%; margin: 0; padding: 0; }
-            .page-break-avoid { page-break-inside: avoid; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LanBo-Moe | Moses Olanrewaju Bolarin</title>
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/my-favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/my-favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Official website of Moses Olanrewaju Bolarin (LanBo-Moe) – strategist, author, creative entrepreneur, and digital leader." />
+  <meta name="author" content="Moses Olanrewaju Bolarin" />
+  <meta name="keywords" content="LanBo-Moe, Moses Bolarin, 3niti, Majestic Multimedia, digital strategy, multimedia academy, faith and purpose, Nigeria" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph Meta (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="LanBo-Moe | Moses Olanrewaju Bolarin" />
+  <meta property="og:description" content="Discover the vision, creativity, and digital leadership of Moses Olanrewaju Bolarin." />
+  <meta property="og:image" content="https://lanbomoe.github.io/my-favicon/favicon-96x96.png" />
+  <meta property="og:url" content="https://lanbomoe.github.io" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LanBo-Moe | Moses Olanrewaju Bolarin" />
+  <meta name="twitter:description" content="Discover the vision, creativity, and digital leadership of Moses Olanrewaju Bolarin." />
+  <meta name="twitter:image" content="https://lanbomoe.github.io/my-favicon/favicon-96x96.png" />
+
+  <!-- Optional: Mobile Browser Color -->
+  <meta name="theme-color" content="#800080" />
+
+  <!-- Color Variables and Styles -->
+  <style>
+    :root {
+      --gold: #A68024;
+      --deep-blue: #800080;
+      --light-gold: #FFF2CC;
+      --earth-brown: #333333;
+      --light-brown: #FFFFFF;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: #333;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(120deg, var(--deep-blue), #1a1a4e);
+    }
+    .gold-text { color: var(--gold); }
+    .deep-blue-text { color: var(--deep-blue); }
+    .gold-border { border-color: var(--gold); }
+    .gold-bg { background-color: var(--gold); }
+    .deep-blue-bg { background-color: var(--deep-blue); }
+    .earth-bg { background-color: var(--earth-brown); }
+    .light-gold-bg { background-color: var(--light-gold); }
+    .shadow-gold { box-shadow: 0 4px 14px rgba(255, 215, 0, 0.25); }
+    .shadow-blue { box-shadow: 0 4px 14px rgba(0, 0, 128, 0.25); }
+  </style>
 </head>
+
 <body>
 
 <nav class="bg-white shadow-md sticky top-0 z-50">
